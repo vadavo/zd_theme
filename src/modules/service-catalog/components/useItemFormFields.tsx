@@ -90,12 +90,14 @@ export function useItemFormFields(
 
   useEffect(() => {
     const fetchAndSetFields = async () => {
-      try {
-        await fetchTicketFields(serviceCatalogItem.form_id, baseLocale).then(
-          (ticketFields) => setRequestFields(ticketFields)
-        );
-      } catch (error) {
-        console.error("Error fetching ticket fields:", error);
+      if (serviceCatalogItem.form_id) {
+        try {
+          await fetchTicketFields(serviceCatalogItem.form_id, baseLocale).then(
+            (ticketFields) => setRequestFields(ticketFields)
+          );
+        } catch (error) {
+          console.error("Error fetching ticket fields:", error);
+        }
       }
     };
 
