@@ -1,0 +1,9 @@
+.search-form {
+    input[type="search"] {
+        @extend .textfield;
+    }
+
+    .clear-button {
+        display: none;
+    }
+}
