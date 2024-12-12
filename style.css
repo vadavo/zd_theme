@@ -296,6 +296,26 @@ template {
   text-align: center;
 }
 
+.contains-text, article {
+  padding: 0 1.5em;
+}
+
+@media screen and (min-width: 768px) {
+  .contains-text, article {
+    padding: 2em 4em;
+  }
+}
+.contains-text > .division-group, article > .division-group {
+  margin-right: -1.5em;
+  margin-left: -1.5em;
+}
+
+@media screen and (min-width: 768px) {
+  .contains-text > .division-group, article > .division-group {
+    margin-right: -4em;
+    margin-left: -4em;
+  }
+}
 .contains-text > *:not(h1, h2, h3, h4), article > *:not(h1, h2, h3, h4) {
   margin-bottom: 1.5em;
 }
@@ -581,6 +601,26 @@ ol.assistant-steps > li {
   text-align: center;
 }
 
+.contains-text, article {
+  padding: 0 1.5em;
+}
+
+@media screen and (min-width: 768px) {
+  .contains-text, article {
+    padding: 2em 4em;
+  }
+}
+.contains-text > .division-group, article > .division-group {
+  margin-right: -1.5em;
+  margin-left: -1.5em;
+}
+
+@media screen and (min-width: 768px) {
+  .contains-text > .division-group, article > .division-group {
+    margin-right: -4em;
+    margin-left: -4em;
+  }
+}
 .contains-text > *:not(h1, h2, h3, h4), article > *:not(h1, h2, h3, h4) {
   margin-bottom: 1.5em;
 }
@@ -647,6 +687,26 @@ code {
   text-align: center;
 }
 
+.contains-text, article {
+  padding: 0 1.5em;
+}
+
+@media screen and (min-width: 768px) {
+  .contains-text, article {
+    padding: 2em 4em;
+  }
+}
+.contains-text > .division-group, article > .division-group {
+  margin-right: -1.5em;
+  margin-left: -1.5em;
+}
+
+@media screen and (min-width: 768px) {
+  .contains-text > .division-group, article > .division-group {
+    margin-right: -4em;
+    margin-left: -4em;
+  }
+}
 .contains-text > *:not(h1, h2, h3, h4), article > *:not(h1, h2, h3, h4) {
   margin-bottom: 1.5em;
 }
@@ -676,6 +736,41 @@ code {
 }
 .card > .header {
   font-size: 1.5em;
+}
+
+.cta {
+  padding: 2.5em 1em;
+  border-radius: 24px;
+  border: 1px solid #007459;
+  background: #d9eb89;
+  backdrop-filter: blur(75px);
+  text-align: center;
+  margin: 0 auto;
+}
+
+.cta.icon-question::before {
+  content: "";
+  display: block;
+  background-image: url("/vadavo.ds/maxi/question.svg?version=0.0.1");
+  width: 5em;
+  height: 5em;
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin: 0 auto 2em;
+}
+
+.cta > .header {
+  font-size: 2.5em;
+  font-family: Syne, sans-serif;
+  margin-bottom: 0.5em;
+}
+
+.cta > .content {
+  margin-bottom: 3em;
+}
+
+.cta > a, .cta > button {
+  max-width: 20em;
 }
 
 input[type=checkbox] {
@@ -812,6 +907,474 @@ body > .footer > .under-line > .menu a {
     padding: 4rem;
   }
 }
+a.folder {
+  display: grid;
+  padding: 1.8em;
+  gap: 2em;
+  grid-template-columns: 1fr 3em;
+  grid-template-rows: 3em 1fr 1fr;
+  grid-template-areas: "empty icon" "title title" "subtitle next";
+  color: #222e43 !important;
+  background-color: #fbfbfb;
+  border: 1px solid #20463b;
+  border-radius: 24px;
+}
+
+a.folder:not(.no-shadow) {
+  box-shadow: 8px 8px #c8e6da, 8px 8px 0 1px #007459;
+}
+
+a.folder:hover {
+  text-decoration: none;
+  transition: box-shadow 0.5s ease, background-color 0.5s ease;
+  background-color: #f0f0f0;
+}
+
+a.folder:focus {
+  outline: none;
+  border-width: 2px;
+  padding: calc(1.8em - 1px);
+}
+
+a.folder.icon-laptop::before {
+  grid-area: icon;
+  content: "";
+  background-image: url("/vadavo.ds/icons/light/laptop.svg?version=0.0.1");
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 3em;
+  height: 3em;
+}
+
+a.folder.icon-antivirus::before {
+  grid-area: icon;
+  content: "";
+  background-image: url("/vadavo.ds/icons/light/antivirus.svg?version=0.0.1");
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 3em;
+  height: 3em;
+}
+
+a.folder.icon-secure-laptop::before {
+  grid-area: icon;
+  content: "";
+  background-image: url("/vadavo.ds/icons/light/secure-laptop.svg?version=0.0.1");
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 3em;
+  height: 3em;
+}
+
+a.folder.icon-xml-document::before {
+  grid-area: icon;
+  content: "";
+  background-image: url("/vadavo.ds/icons/light/xml-document.svg?version=0.0.1");
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 3em;
+  height: 3em;
+}
+
+a.folder.icon-secure-cloud::before {
+  grid-area: icon;
+  content: "";
+  background-image: url("/vadavo.ds/icons/light/secure-cloud.svg?version=0.0.1");
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 3em;
+  height: 3em;
+}
+
+a.folder.icon-xml-desktop::before {
+  grid-area: icon;
+  content: "";
+  background-image: url("/vadavo.ds/icons/light/xml-desktop.svg?version=0.0.1");
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 3em;
+  height: 3em;
+}
+
+a.folder.icon-network::before {
+  grid-area: icon;
+  content: "";
+  background-image: url("/vadavo.ds/icons/light/network.svg?version=0.0.1");
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 3em;
+  height: 3em;
+}
+
+a.folder.icon-success-shield::before {
+  grid-area: icon;
+  content: "";
+  background-image: url("/vadavo.ds/icons/light/success-shield.svg?version=0.0.1");
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 3em;
+  height: 3em;
+}
+
+a.folder.icon-success-desktop::before {
+  grid-area: icon;
+  content: "";
+  background-image: url("/vadavo.ds/icons/light/success-desktop.svg?version=0.0.1");
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 3em;
+  height: 3em;
+}
+
+a.folder.icon-connected-devices::before {
+  grid-area: icon;
+  content: "";
+  background-image: url("/vadavo.ds/icons/light/connected-devices.svg?version=0.0.1");
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 3em;
+  height: 3em;
+}
+
+a.folder.icon-wordpress::before {
+  grid-area: icon;
+  content: "";
+  background-image: url("/vadavo.ds/icons/light/wordpress.svg?version=0.0.1");
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 3em;
+  height: 3em;
+}
+
+a.folder.icon-info::before {
+  grid-area: icon;
+  content: "";
+  background-image: url("/vadavo.ds/icons/light/info.svg?version=0.0.1");
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 3em;
+  height: 3em;
+}
+
+a.folder.icon-sync-database::before {
+  grid-area: icon;
+  content: "";
+  background-image: url("/vadavo.ds/icons/light/sync-database.svg?version=0.0.1");
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 3em;
+  height: 3em;
+}
+
+a.folder.icon-database::before {
+  grid-area: icon;
+  content: "";
+  background-image: url("/vadavo.ds/icons/light/database.svg?version=0.0.1");
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 3em;
+  height: 3em;
+}
+
+a.folder.icon-database-success::before {
+  grid-area: icon;
+  content: "";
+  background-image: url("/vadavo.ds/icons/light/database-success.svg?version=0.0.1");
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 3em;
+  height: 3em;
+}
+
+a.folder.icon-database-error::before {
+  grid-area: icon;
+  content: "";
+  background-image: url("/vadavo.ds/icons/light/database-error.svg?version=0.0.1");
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 3em;
+  height: 3em;
+}
+
+a.folder.icon-shield-error-laptop::before {
+  grid-area: icon;
+  content: "";
+  background-image: url("/vadavo.ds/icons/light/shield-error-laptop.svg?version=0.0.1");
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 3em;
+  height: 3em;
+}
+
+a.folder.icon-virus::before {
+  grid-area: icon;
+  content: "";
+  background-image: url("/vadavo.ds/icons/light/virus.svg?version=0.0.1");
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 3em;
+  height: 3em;
+}
+
+a.folder.icon-server::before {
+  grid-area: icon;
+  content: "";
+  background-image: url("/vadavo.ds/icons/light/server.svg?version=0.0.1");
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 3em;
+  height: 3em;
+}
+
+a.folder.icon-firewall::before {
+  grid-area: icon;
+  content: "";
+  background-image: url("/vadavo.ds/icons/light/firewall.svg?version=0.0.1");
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 3em;
+  height: 3em;
+}
+
+a.folder.icon-gear::before {
+  grid-area: icon;
+  content: "";
+  background-image: url("/vadavo.ds/icons/light/gear.svg?version=0.0.1");
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 3em;
+  height: 3em;
+}
+
+a.folder.icon-secure-shield::before {
+  grid-area: icon;
+  content: "";
+  background-image: url("/vadavo.ds/icons/light/secure-shield.svg?version=0.0.1");
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 3em;
+  height: 3em;
+}
+
+a.folder.icon-cpanel::before {
+  grid-area: icon;
+  content: "";
+  background-image: url("/vadavo.ds/icons/light/cpanel.svg?version=0.0.1");
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 3em;
+  height: 3em;
+}
+
+a.folder.icon-whatsapp::before {
+  grid-area: icon;
+  content: "";
+  background-image: url("/vadavo.ds/icons/light/whatsapp.svg?version=0.0.1");
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 3em;
+  height: 3em;
+}
+
+a.folder.icon-unsecured-internet::before {
+  grid-area: icon;
+  content: "";
+  background-image: url("/vadavo.ds/icons/light/unsecured-internet.svg?version=0.0.1");
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 3em;
+  height: 3em;
+}
+
+a.folder.icon-secured-internet::before {
+  grid-area: icon;
+  content: "";
+  background-image: url("/vadavo.ds/icons/light/secured-internet.svg?version=0.0.1");
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 3em;
+  height: 3em;
+}
+
+a.folder.icon-shield-success-laptop::before {
+  grid-area: icon;
+  content: "";
+  background-image: url("/vadavo.ds/icons/light/shield-success-laptop.svg?version=0.0.1");
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 3em;
+  height: 3em;
+}
+
+a.folder.icon-multiple-documents::before {
+  grid-area: icon;
+  content: "";
+  background-image: url("/vadavo.ds/icons/light/multiple-documents.svg?version=0.0.1");
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 3em;
+  height: 3em;
+}
+
+a.folder.icon-connected-servers::before {
+  grid-area: icon;
+  content: "";
+  background-image: url("/vadavo.ds/icons/light/connected-servers.svg?version=0.0.1");
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 3em;
+  height: 3em;
+}
+
+a.folder.icon-globe::before {
+  grid-area: icon;
+  content: "";
+  background-image: url("/vadavo.ds/icons/light/globe.svg?version=0.0.1");
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 3em;
+  height: 3em;
+}
+
+a.folder.icon-connected-globe::before {
+  grid-area: icon;
+  content: "";
+  background-image: url("/vadavo.ds/icons/light/connected-globe.svg?version=0.0.1");
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 3em;
+  height: 3em;
+}
+
+a.folder.icon-email::before, #categories > .categories a.folder.category-Correos::before {
+  grid-area: icon;
+  content: "";
+  background-image: url("/vadavo.ds/icons/light/email.svg?version=0.0.1");
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 3em;
+  height: 3em;
+}
+
+a.folder.icon-connected-cloud::before {
+  grid-area: icon;
+  content: "";
+  background-image: url("/vadavo.ds/icons/light/connected-cloud.svg?version=0.0.1");
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 3em;
+  height: 3em;
+}
+
+a.folder.icon-document::before {
+  grid-area: icon;
+  content: "";
+  background-image: url("/vadavo.ds/icons/light/document.svg?version=0.0.1");
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 3em;
+  height: 3em;
+}
+
+a.folder.icon-cloud-server::before {
+  grid-area: icon;
+  content: "";
+  background-image: url("/vadavo.ds/icons/light/cloud-server.svg?version=0.0.1");
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 3em;
+  height: 3em;
+}
+
+a.folder.icon-connected-server::before {
+  grid-area: icon;
+  content: "";
+  background-image: url("/vadavo.ds/icons/light/connected-server.svg?version=0.0.1");
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 3em;
+  height: 3em;
+}
+
+a.folder.icon-mobile::before {
+  grid-area: icon;
+  content: "";
+  background-image: url("/vadavo.ds/icons/light/mobile.svg?version=0.0.1");
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 3em;
+  height: 3em;
+}
+
+a.folder.icon-desktop::before {
+  grid-area: icon;
+  content: "";
+  background-image: url("/vadavo.ds/icons/light/desktop.svg?version=0.0.1");
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 3em;
+  height: 3em;
+}
+
+a.folder.icon-connected-folder::before {
+  grid-area: icon;
+  content: "";
+  background-image: url("/vadavo.ds/icons/light/connected-folder.svg?version=0.0.1");
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 3em;
+  height: 3em;
+}
+
+a.folder.icon-download-cloud::before {
+  grid-area: icon;
+  content: "";
+  background-image: url("/vadavo.ds/icons/light/download-cloud.svg?version=0.0.1");
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 3em;
+  height: 3em;
+}
+
+a.folder.icon-upload-cloud::before {
+  grid-area: icon;
+  content: "";
+  background-image: url("/vadavo.ds/icons/light/upload-cloud.svg?version=0.0.1");
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 3em;
+  height: 3em;
+}
+
+a.folder.icon-folder::before, a.folder::before {
+  grid-area: icon;
+  content: "";
+  background-image: url("/vadavo.ds/icons/light/folder.svg?version=0.0.1");
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 3em;
+  height: 3em;
+}
+
+a.folder::after {
+  grid-area: next;
+  content: "";
+  background-image: url("/vadavo.ds/icons/next.svg?version=0.0.1");
+  background-repeat: no-repeat;
+  width: 3em;
+  height: 3em;
+  margin-top: auto;
+}
+
+a.folder .title {
+  grid-area: title;
+  font-size: 1.6rem;
+}
+
+a.folder .content {
+  grid-area: subtitle;
+}
+
 .navbar.double > .top > .left, .navbar.double > .top > .center, .navbar.double > .top > .right, .navbar.double > .bottom > .left, .navbar.double > .bottom > .center, .navbar.double > .bottom > .right, .navbar.single > .left, .navbar.single > .center, .navbar.single > .right {
   display: flex;
   width: 100%;
@@ -1206,7 +1769,76 @@ table thead td, table thead th {
 
 textarea.textfield {
   height: 9em;
+}
+
+.division-group > .division {
+  background-color: #f9f8f3;
+  padding: 2em 4em 4em;
+  margin: auto;
+}
+
+.division-group > .division.top {
+  border-radius: 0 0 48px 48px;
+  border-bottom: 1px solid #20463b;
+}
+
+.division-group > .division.bottom {
+  border-radius: 48px 48px 0 0;
+  border-top: 1px solid #20463b;
+}
+
+.division-group > .division.bottom:not(:first-child) {
+  margin-top: calc(-2em - 5px);
+}
+
+.division-group > .division.secondary {
+  background-color: #c8e6da;
+}
+
+.division-group > .division:last-child {
+  padding-bottom: 0;
 } 
 .search-form .clear-button {
   display: none;
+}
+
+.hero {
+  padding: 2em;
+  max-width: 1024px;
+  margin: 0 auto;
+  text-align: center;
+}
+.hero h1 {
+  margin-top: 2em;
+  margin-bottom: 1em;
+}
+.hero p {
+  margin-bottom: 2em;
+}
+.hero .search-form {
+  margin: 0 auto 4em;
+  width: 70%;
+}
+
+#categories h2 {
+  text-align: center;
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+#categories > .categories {
+  max-width: 1024px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2em;
+}
+@media screen and (min-width: 768px) {
+  #categories > .categories {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media screen and (min-width: 1024px) {
+  #categories > .categories {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
 }
