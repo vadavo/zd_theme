@@ -19,6 +19,11 @@
     }
 }
 
+.division > div {
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
 #categories {
     h2 {
         text-align: center;
@@ -27,8 +32,6 @@
     }
 
     >.categories {
-        max-width: 1024px;
-        margin: 0 auto;
         display: grid;
         grid-template-columns: 1fr;
         gap: 2em;
@@ -44,5 +47,100 @@
         .category-Correos {
             @extend .icon-email;
         }
+
+        .category-Servidores {
+            @extend .icon-server;
+        }
+
+        .category-Telefonía.móvil {
+            @extend .icon-mobile;
+        }
+
+        .category-Internet {
+            @extend .icon-globe;
+        }
+
+        .category-Datacenter {
+            @extend .icon-firewall
+        }
+
+        .category-Hosting {
+            @extend .icon-cloud-server;
+        }
+
+        .category-Dominios {
+            @extend .icon-globe;
+        }
     }
+}
+
+.recent-activity {
+    .recent-activity-header {
+        text-align: center;
+        border-bottom: 1px solid #20463B;
+        padding-top: 1em;
+        padding-bottom: 1em;
+        margin-bottom: 1em;
+    }
+
+    .recent-activity-list {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 2em;
+
+        @media screen and (min-width: 768px) {
+            grid-template-columns: 1fr 1fr;
+        }
+
+        @media screen and (min-width: 1024px) {
+            grid-template-columns: 1fr 1fr 1fr;
+        }
+
+        .recent-activity-item {
+            padding: 2em;
+            background-color: white;
+            border-radius: 20px;
+            border: 1px solid #20463B;
+
+            h3 {
+                display: inline-block;
+                border: 0.555px solid var(--VERDE-PINO, #20463B);
+                border-radius: 111.041px;
+                font-size: .7em;
+                background-color: hsla(71, 71%, 73%, 1);
+                padding: 0.2em 1em;
+                text-transform: uppercase;
+
+                a {
+                    color: #20463B !important;
+                }
+            }
+
+            .recent-activity-item-link {
+                display: block;
+                margin-top: .5em;
+                margin-bottom: 1em;
+            }
+
+            .recent-activity-item-comment {
+                display: none;
+            }
+        }
+    }
+
+    .recent-activity-controls {
+        margin: 2em auto 0;
+        text-align: center;
+        display: block;
+        a {
+            @extend .button;
+            @extend .tertiary;
+            @extend .no-shadow;
+        }
+    }
+}
+
+.cta {
+    margin-top: 3em;
+    margin-bottom: 3em;
 }

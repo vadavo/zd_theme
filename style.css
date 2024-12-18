@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import "https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&family=Syne:wght@400..800&display=swap";
 @import "https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&family=Syne:wght@400..800&display=swap";
 *, ::after, ::before {
@@ -41,7 +42,7 @@ hr {
   overflow: visible;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1, h2, h3, #search-result .no-results, #search-result article .title, h4, h5, h6 {
   margin-top: 0;
   margin-bottom: 0.5rem;
 }
@@ -344,7 +345,7 @@ a {
   color: #007459 !important;
 }
 
-h4, h3, h2, h1 {
+h4, h3, #search-result .no-results, #search-result article .title, h2, h1 {
   color: #20463b;
   font-family: Syne, sans-serif;
   font-weight: 700;
@@ -360,7 +361,7 @@ h2 {
   line-height: 56.2px;
 }
 
-h3 {
+h3, #search-result .no-results, #search-result article .title {
   font-size: 1.5em;
   line-height: 34.6px;
 }
@@ -530,7 +531,7 @@ ol.assistant-steps > li {
     flex-wrap: nowrap;
   }
 }
-.button {
+.button, #search-result .pagination a, .recent-activity .recent-activity-controls a {
   padding: 1em 1.5em;
   font-family: Syne, sans-serif;
   font-size: 1em;
@@ -543,44 +544,44 @@ ol.assistant-steps > li {
   cursor: pointer;
 }
 
-.button:hover {
+.button:hover, #search-result .pagination a:hover, .recent-activity .recent-activity-controls a:hover {
   text-decoration: none;
   box-shadow: none !important;
   transition: box-shadow 0.5s ease, background-color 0.5s ease;
 }
 
-.button:focus {
+.button:focus, #search-result .pagination a:focus, .recent-activity .recent-activity-controls a:focus {
   outline: none;
   border-width: 2px;
   padding: calc(1em - 1px) calc(1.5em - 1px);
 }
 
-.button:disabled, .button.disabled {
+.button:disabled, #search-result .pagination a:disabled, .recent-activity .recent-activity-controls a:disabled, .button.disabled, #search-result .pagination a.disabled, .recent-activity .recent-activity-controls a.disabled {
   opacity: 0.5;
   pointer-events: none;
 }
 
-.button.primary {
+.button.primary, #search-result .pagination a.primary, .recent-activity .recent-activity-controls a.primary {
   color: #fff !important;
   background-color: #007459;
   box-shadow: 4px 4px #fbfbfb, 4px 4px 0 1px #161c1c;
 }
 
-.button.primary:hover {
+.button.primary:hover, #search-result .pagination a.primary:hover, .recent-activity .recent-activity-controls a.primary:hover {
   background-color: #20463b;
 }
 
-.button.secondary {
+.button.secondary, #search-result .pagination a, .recent-activity .recent-activity-controls a.secondary {
   color: #20463b !important;
   background-color: #d9eb89;
   box-shadow: 4px 4px #fbfbfb, 4px 4px 0 1px #20463b;
 }
 
-.button.secondary:hover {
+.button.secondary:hover, #search-result .pagination a:hover, .recent-activity .recent-activity-controls a.secondary:hover {
   background-color: #c8e6da;
 }
 
-.button.tertiary {
+.button.tertiary, #search-result .pagination a.tertiary, .recent-activity .recent-activity-controls a {
   color: #161c1c !important;
   font-family: Figtree, sans-serif;
   font-weight: 500;
@@ -588,11 +589,11 @@ ol.assistant-steps > li {
   border-color: #161c1c;
 }
 
-.button.tertiary:hover {
+.button.tertiary:hover, #search-result .pagination a.tertiary:hover, .recent-activity .recent-activity-controls a:hover {
   background-color: #fbfbfb;
 }
 
-.button.no-shadow {
+.button.no-shadow, #search-result .pagination a, .recent-activity .recent-activity-controls a {
   box-shadow: none;
 }
 
@@ -649,7 +650,7 @@ a {
   color: #007459 !important;
 }
 
-.card > .header, h4, h3, h2, h1 {
+.card > .header, h4, h3, #search-result .no-results, #search-result article .title, h2, h1 {
   color: #20463b;
   font-family: Syne, sans-serif;
   font-weight: 700;
@@ -665,7 +666,7 @@ h2 {
   line-height: 56.2px;
 }
 
-h3 {
+h3, #search-result .no-results, #search-result article .title {
   font-size: 1.5em;
   line-height: 34.6px;
 }
@@ -751,7 +752,7 @@ code {
 .cta.icon-question::before {
   content: "";
   display: block;
-  background-image: url("/vadavo.ds/maxi/question.svg?version=0.0.1");
+  background-image: url("https://ds.vadavo.com/assets/maxi/question.svg?version=0.0.1");
   width: 5em;
   height: 5em;
   background-size: contain;
@@ -939,7 +940,7 @@ a.folder:focus {
 a.folder.icon-laptop::before {
   grid-area: icon;
   content: "";
-  background-image: url("/vadavo.ds/icons/light/laptop.svg?version=0.0.1");
+  background-image: url("https://ds.vadavo.com/assets/icons/light/laptop.svg?version=0.0.1");
   background-repeat: no-repeat;
   background-size: contain;
   width: 3em;
@@ -949,7 +950,7 @@ a.folder.icon-laptop::before {
 a.folder.icon-antivirus::before {
   grid-area: icon;
   content: "";
-  background-image: url("/vadavo.ds/icons/light/antivirus.svg?version=0.0.1");
+  background-image: url("https://ds.vadavo.com/assets/icons/light/antivirus.svg?version=0.0.1");
   background-repeat: no-repeat;
   background-size: contain;
   width: 3em;
@@ -959,7 +960,7 @@ a.folder.icon-antivirus::before {
 a.folder.icon-secure-laptop::before {
   grid-area: icon;
   content: "";
-  background-image: url("/vadavo.ds/icons/light/secure-laptop.svg?version=0.0.1");
+  background-image: url("https://ds.vadavo.com/assets/icons/light/secure-laptop.svg?version=0.0.1");
   background-repeat: no-repeat;
   background-size: contain;
   width: 3em;
@@ -969,7 +970,7 @@ a.folder.icon-secure-laptop::before {
 a.folder.icon-xml-document::before {
   grid-area: icon;
   content: "";
-  background-image: url("/vadavo.ds/icons/light/xml-document.svg?version=0.0.1");
+  background-image: url("https://ds.vadavo.com/assets/icons/light/xml-document.svg?version=0.0.1");
   background-repeat: no-repeat;
   background-size: contain;
   width: 3em;
@@ -979,7 +980,7 @@ a.folder.icon-xml-document::before {
 a.folder.icon-secure-cloud::before {
   grid-area: icon;
   content: "";
-  background-image: url("/vadavo.ds/icons/light/secure-cloud.svg?version=0.0.1");
+  background-image: url("https://ds.vadavo.com/assets/icons/light/secure-cloud.svg?version=0.0.1");
   background-repeat: no-repeat;
   background-size: contain;
   width: 3em;
@@ -989,7 +990,7 @@ a.folder.icon-secure-cloud::before {
 a.folder.icon-xml-desktop::before {
   grid-area: icon;
   content: "";
-  background-image: url("/vadavo.ds/icons/light/xml-desktop.svg?version=0.0.1");
+  background-image: url("https://ds.vadavo.com/assets/icons/light/xml-desktop.svg?version=0.0.1");
   background-repeat: no-repeat;
   background-size: contain;
   width: 3em;
@@ -999,7 +1000,7 @@ a.folder.icon-xml-desktop::before {
 a.folder.icon-network::before {
   grid-area: icon;
   content: "";
-  background-image: url("/vadavo.ds/icons/light/network.svg?version=0.0.1");
+  background-image: url("https://ds.vadavo.com/assets/icons/light/network.svg?version=0.0.1");
   background-repeat: no-repeat;
   background-size: contain;
   width: 3em;
@@ -1009,7 +1010,7 @@ a.folder.icon-network::before {
 a.folder.icon-success-shield::before {
   grid-area: icon;
   content: "";
-  background-image: url("/vadavo.ds/icons/light/success-shield.svg?version=0.0.1");
+  background-image: url("https://ds.vadavo.com/assets/icons/light/success-shield.svg?version=0.0.1");
   background-repeat: no-repeat;
   background-size: contain;
   width: 3em;
@@ -1019,7 +1020,7 @@ a.folder.icon-success-shield::before {
 a.folder.icon-success-desktop::before {
   grid-area: icon;
   content: "";
-  background-image: url("/vadavo.ds/icons/light/success-desktop.svg?version=0.0.1");
+  background-image: url("https://ds.vadavo.com/assets/icons/light/success-desktop.svg?version=0.0.1");
   background-repeat: no-repeat;
   background-size: contain;
   width: 3em;
@@ -1029,7 +1030,7 @@ a.folder.icon-success-desktop::before {
 a.folder.icon-connected-devices::before {
   grid-area: icon;
   content: "";
-  background-image: url("/vadavo.ds/icons/light/connected-devices.svg?version=0.0.1");
+  background-image: url("https://ds.vadavo.com/assets/icons/light/connected-devices.svg?version=0.0.1");
   background-repeat: no-repeat;
   background-size: contain;
   width: 3em;
@@ -1039,7 +1040,7 @@ a.folder.icon-connected-devices::before {
 a.folder.icon-wordpress::before {
   grid-area: icon;
   content: "";
-  background-image: url("/vadavo.ds/icons/light/wordpress.svg?version=0.0.1");
+  background-image: url("https://ds.vadavo.com/assets/icons/light/wordpress.svg?version=0.0.1");
   background-repeat: no-repeat;
   background-size: contain;
   width: 3em;
@@ -1049,7 +1050,7 @@ a.folder.icon-wordpress::before {
 a.folder.icon-info::before {
   grid-area: icon;
   content: "";
-  background-image: url("/vadavo.ds/icons/light/info.svg?version=0.0.1");
+  background-image: url("https://ds.vadavo.com/assets/icons/light/info.svg?version=0.0.1");
   background-repeat: no-repeat;
   background-size: contain;
   width: 3em;
@@ -1059,7 +1060,7 @@ a.folder.icon-info::before {
 a.folder.icon-sync-database::before {
   grid-area: icon;
   content: "";
-  background-image: url("/vadavo.ds/icons/light/sync-database.svg?version=0.0.1");
+  background-image: url("https://ds.vadavo.com/assets/icons/light/sync-database.svg?version=0.0.1");
   background-repeat: no-repeat;
   background-size: contain;
   width: 3em;
@@ -1069,7 +1070,7 @@ a.folder.icon-sync-database::before {
 a.folder.icon-database::before {
   grid-area: icon;
   content: "";
-  background-image: url("/vadavo.ds/icons/light/database.svg?version=0.0.1");
+  background-image: url("https://ds.vadavo.com/assets/icons/light/database.svg?version=0.0.1");
   background-repeat: no-repeat;
   background-size: contain;
   width: 3em;
@@ -1079,7 +1080,7 @@ a.folder.icon-database::before {
 a.folder.icon-database-success::before {
   grid-area: icon;
   content: "";
-  background-image: url("/vadavo.ds/icons/light/database-success.svg?version=0.0.1");
+  background-image: url("https://ds.vadavo.com/assets/icons/light/database-success.svg?version=0.0.1");
   background-repeat: no-repeat;
   background-size: contain;
   width: 3em;
@@ -1089,7 +1090,7 @@ a.folder.icon-database-success::before {
 a.folder.icon-database-error::before {
   grid-area: icon;
   content: "";
-  background-image: url("/vadavo.ds/icons/light/database-error.svg?version=0.0.1");
+  background-image: url("https://ds.vadavo.com/assets/icons/light/database-error.svg?version=0.0.1");
   background-repeat: no-repeat;
   background-size: contain;
   width: 3em;
@@ -1099,7 +1100,7 @@ a.folder.icon-database-error::before {
 a.folder.icon-shield-error-laptop::before {
   grid-area: icon;
   content: "";
-  background-image: url("/vadavo.ds/icons/light/shield-error-laptop.svg?version=0.0.1");
+  background-image: url("https://ds.vadavo.com/assets/icons/light/shield-error-laptop.svg?version=0.0.1");
   background-repeat: no-repeat;
   background-size: contain;
   width: 3em;
@@ -1109,27 +1110,27 @@ a.folder.icon-shield-error-laptop::before {
 a.folder.icon-virus::before {
   grid-area: icon;
   content: "";
-  background-image: url("/vadavo.ds/icons/light/virus.svg?version=0.0.1");
+  background-image: url("https://ds.vadavo.com/assets/icons/light/virus.svg?version=0.0.1");
   background-repeat: no-repeat;
   background-size: contain;
   width: 3em;
   height: 3em;
 }
 
-a.folder.icon-server::before {
+a.folder.icon-server::before, #categories > .categories a.folder.category-Servidores::before {
   grid-area: icon;
   content: "";
-  background-image: url("/vadavo.ds/icons/light/server.svg?version=0.0.1");
+  background-image: url("https://ds.vadavo.com/assets/icons/light/server.svg?version=0.0.1");
   background-repeat: no-repeat;
   background-size: contain;
   width: 3em;
   height: 3em;
 }
 
-a.folder.icon-firewall::before {
+a.folder.icon-firewall::before, #categories > .categories a.folder.category-Datacenter::before {
   grid-area: icon;
   content: "";
-  background-image: url("/vadavo.ds/icons/light/firewall.svg?version=0.0.1");
+  background-image: url("https://ds.vadavo.com/assets/icons/light/firewall.svg?version=0.0.1");
   background-repeat: no-repeat;
   background-size: contain;
   width: 3em;
@@ -1139,7 +1140,7 @@ a.folder.icon-firewall::before {
 a.folder.icon-gear::before {
   grid-area: icon;
   content: "";
-  background-image: url("/vadavo.ds/icons/light/gear.svg?version=0.0.1");
+  background-image: url("https://ds.vadavo.com/assets/icons/light/gear.svg?version=0.0.1");
   background-repeat: no-repeat;
   background-size: contain;
   width: 3em;
@@ -1149,7 +1150,7 @@ a.folder.icon-gear::before {
 a.folder.icon-secure-shield::before {
   grid-area: icon;
   content: "";
-  background-image: url("/vadavo.ds/icons/light/secure-shield.svg?version=0.0.1");
+  background-image: url("https://ds.vadavo.com/assets/icons/light/secure-shield.svg?version=0.0.1");
   background-repeat: no-repeat;
   background-size: contain;
   width: 3em;
@@ -1159,7 +1160,7 @@ a.folder.icon-secure-shield::before {
 a.folder.icon-cpanel::before {
   grid-area: icon;
   content: "";
-  background-image: url("/vadavo.ds/icons/light/cpanel.svg?version=0.0.1");
+  background-image: url("https://ds.vadavo.com/assets/icons/light/cpanel.svg?version=0.0.1");
   background-repeat: no-repeat;
   background-size: contain;
   width: 3em;
@@ -1169,7 +1170,7 @@ a.folder.icon-cpanel::before {
 a.folder.icon-whatsapp::before {
   grid-area: icon;
   content: "";
-  background-image: url("/vadavo.ds/icons/light/whatsapp.svg?version=0.0.1");
+  background-image: url("https://ds.vadavo.com/assets/icons/light/whatsapp.svg?version=0.0.1");
   background-repeat: no-repeat;
   background-size: contain;
   width: 3em;
@@ -1179,7 +1180,7 @@ a.folder.icon-whatsapp::before {
 a.folder.icon-unsecured-internet::before {
   grid-area: icon;
   content: "";
-  background-image: url("/vadavo.ds/icons/light/unsecured-internet.svg?version=0.0.1");
+  background-image: url("https://ds.vadavo.com/assets/icons/light/unsecured-internet.svg?version=0.0.1");
   background-repeat: no-repeat;
   background-size: contain;
   width: 3em;
@@ -1189,7 +1190,7 @@ a.folder.icon-unsecured-internet::before {
 a.folder.icon-secured-internet::before {
   grid-area: icon;
   content: "";
-  background-image: url("/vadavo.ds/icons/light/secured-internet.svg?version=0.0.1");
+  background-image: url("https://ds.vadavo.com/assets/icons/light/secured-internet.svg?version=0.0.1");
   background-repeat: no-repeat;
   background-size: contain;
   width: 3em;
@@ -1199,7 +1200,7 @@ a.folder.icon-secured-internet::before {
 a.folder.icon-shield-success-laptop::before {
   grid-area: icon;
   content: "";
-  background-image: url("/vadavo.ds/icons/light/shield-success-laptop.svg?version=0.0.1");
+  background-image: url("https://ds.vadavo.com/assets/icons/light/shield-success-laptop.svg?version=0.0.1");
   background-repeat: no-repeat;
   background-size: contain;
   width: 3em;
@@ -1209,7 +1210,7 @@ a.folder.icon-shield-success-laptop::before {
 a.folder.icon-multiple-documents::before {
   grid-area: icon;
   content: "";
-  background-image: url("/vadavo.ds/icons/light/multiple-documents.svg?version=0.0.1");
+  background-image: url("https://ds.vadavo.com/assets/icons/light/multiple-documents.svg?version=0.0.1");
   background-repeat: no-repeat;
   background-size: contain;
   width: 3em;
@@ -1219,17 +1220,17 @@ a.folder.icon-multiple-documents::before {
 a.folder.icon-connected-servers::before {
   grid-area: icon;
   content: "";
-  background-image: url("/vadavo.ds/icons/light/connected-servers.svg?version=0.0.1");
+  background-image: url("https://ds.vadavo.com/assets/icons/light/connected-servers.svg?version=0.0.1");
   background-repeat: no-repeat;
   background-size: contain;
   width: 3em;
   height: 3em;
 }
 
-a.folder.icon-globe::before {
+a.folder.icon-globe::before, #categories > .categories a.folder.category-Dominios::before, #categories > .categories a.folder.category-Internet::before {
   grid-area: icon;
   content: "";
-  background-image: url("/vadavo.ds/icons/light/globe.svg?version=0.0.1");
+  background-image: url("https://ds.vadavo.com/assets/icons/light/globe.svg?version=0.0.1");
   background-repeat: no-repeat;
   background-size: contain;
   width: 3em;
@@ -1239,7 +1240,7 @@ a.folder.icon-globe::before {
 a.folder.icon-connected-globe::before {
   grid-area: icon;
   content: "";
-  background-image: url("/vadavo.ds/icons/light/connected-globe.svg?version=0.0.1");
+  background-image: url("https://ds.vadavo.com/assets/icons/light/connected-globe.svg?version=0.0.1");
   background-repeat: no-repeat;
   background-size: contain;
   width: 3em;
@@ -1249,7 +1250,7 @@ a.folder.icon-connected-globe::before {
 a.folder.icon-email::before, #categories > .categories a.folder.category-Correos::before {
   grid-area: icon;
   content: "";
-  background-image: url("/vadavo.ds/icons/light/email.svg?version=0.0.1");
+  background-image: url("https://ds.vadavo.com/assets/icons/light/email.svg?version=0.0.1");
   background-repeat: no-repeat;
   background-size: contain;
   width: 3em;
@@ -1259,7 +1260,7 @@ a.folder.icon-email::before, #categories > .categories a.folder.category-Correos
 a.folder.icon-connected-cloud::before {
   grid-area: icon;
   content: "";
-  background-image: url("/vadavo.ds/icons/light/connected-cloud.svg?version=0.0.1");
+  background-image: url("https://ds.vadavo.com/assets/icons/light/connected-cloud.svg?version=0.0.1");
   background-repeat: no-repeat;
   background-size: contain;
   width: 3em;
@@ -1269,17 +1270,17 @@ a.folder.icon-connected-cloud::before {
 a.folder.icon-document::before {
   grid-area: icon;
   content: "";
-  background-image: url("/vadavo.ds/icons/light/document.svg?version=0.0.1");
+  background-image: url("https://ds.vadavo.com/assets/icons/light/document.svg?version=0.0.1");
   background-repeat: no-repeat;
   background-size: contain;
   width: 3em;
   height: 3em;
 }
 
-a.folder.icon-cloud-server::before {
+a.folder.icon-cloud-server::before, #categories > .categories a.folder.category-Hosting::before {
   grid-area: icon;
   content: "";
-  background-image: url("/vadavo.ds/icons/light/cloud-server.svg?version=0.0.1");
+  background-image: url("https://ds.vadavo.com/assets/icons/light/cloud-server.svg?version=0.0.1");
   background-repeat: no-repeat;
   background-size: contain;
   width: 3em;
@@ -1289,17 +1290,17 @@ a.folder.icon-cloud-server::before {
 a.folder.icon-connected-server::before {
   grid-area: icon;
   content: "";
-  background-image: url("/vadavo.ds/icons/light/connected-server.svg?version=0.0.1");
+  background-image: url("https://ds.vadavo.com/assets/icons/light/connected-server.svg?version=0.0.1");
   background-repeat: no-repeat;
   background-size: contain;
   width: 3em;
   height: 3em;
 }
 
-a.folder.icon-mobile::before {
+a.folder.icon-mobile::before, #categories > .categories a.folder.category-Telefonía.móvil::before {
   grid-area: icon;
   content: "";
-  background-image: url("/vadavo.ds/icons/light/mobile.svg?version=0.0.1");
+  background-image: url("https://ds.vadavo.com/assets/icons/light/mobile.svg?version=0.0.1");
   background-repeat: no-repeat;
   background-size: contain;
   width: 3em;
@@ -1309,7 +1310,7 @@ a.folder.icon-mobile::before {
 a.folder.icon-desktop::before {
   grid-area: icon;
   content: "";
-  background-image: url("/vadavo.ds/icons/light/desktop.svg?version=0.0.1");
+  background-image: url("https://ds.vadavo.com/assets/icons/light/desktop.svg?version=0.0.1");
   background-repeat: no-repeat;
   background-size: contain;
   width: 3em;
@@ -1319,7 +1320,7 @@ a.folder.icon-desktop::before {
 a.folder.icon-connected-folder::before {
   grid-area: icon;
   content: "";
-  background-image: url("/vadavo.ds/icons/light/connected-folder.svg?version=0.0.1");
+  background-image: url("https://ds.vadavo.com/assets/icons/light/connected-folder.svg?version=0.0.1");
   background-repeat: no-repeat;
   background-size: contain;
   width: 3em;
@@ -1329,7 +1330,7 @@ a.folder.icon-connected-folder::before {
 a.folder.icon-download-cloud::before {
   grid-area: icon;
   content: "";
-  background-image: url("/vadavo.ds/icons/light/download-cloud.svg?version=0.0.1");
+  background-image: url("https://ds.vadavo.com/assets/icons/light/download-cloud.svg?version=0.0.1");
   background-repeat: no-repeat;
   background-size: contain;
   width: 3em;
@@ -1339,7 +1340,7 @@ a.folder.icon-download-cloud::before {
 a.folder.icon-upload-cloud::before {
   grid-area: icon;
   content: "";
-  background-image: url("/vadavo.ds/icons/light/upload-cloud.svg?version=0.0.1");
+  background-image: url("https://ds.vadavo.com/assets/icons/light/upload-cloud.svg?version=0.0.1");
   background-repeat: no-repeat;
   background-size: contain;
   width: 3em;
@@ -1349,7 +1350,7 @@ a.folder.icon-upload-cloud::before {
 a.folder.icon-folder::before, a.folder::before {
   grid-area: icon;
   content: "";
-  background-image: url("/vadavo.ds/icons/light/folder.svg?version=0.0.1");
+  background-image: url("https://ds.vadavo.com/assets/icons/light/folder.svg?version=0.0.1");
   background-repeat: no-repeat;
   background-size: contain;
   width: 3em;
@@ -1359,7 +1360,7 @@ a.folder.icon-folder::before, a.folder::before {
 a.folder::after {
   grid-area: next;
   content: "";
-  background-image: url("/vadavo.ds/icons/next.svg?version=0.0.1");
+  background-image: url("https://ds.vadavo.com/assets/icons/next.svg?version=0.0.1");
   background-repeat: no-repeat;
   width: 3em;
   height: 3em;
@@ -1791,7 +1792,7 @@ textarea.textfield {
   margin-top: calc(-2em - 5px);
 }
 
-.division-group > .division.secondary {
+.division-group > .division.secondary, #search-result .pagination .division-group > a.division {
   background-color: #c8e6da;
 }
 
@@ -1820,14 +1821,17 @@ textarea.textfield {
   width: 70%;
 }
 
+.division > div {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
 #categories h2 {
   text-align: center;
   margin-top: 1em;
   margin-bottom: 1em;
 }
 #categories > .categories {
-  max-width: 1024px;
-  margin: 0 auto;
   display: grid;
   grid-template-columns: 1fr;
   gap: 2em;
@@ -1841,4 +1845,125 @@ textarea.textfield {
   #categories > .categories {
     grid-template-columns: 1fr 1fr 1fr;
   }
+}
+.recent-activity .recent-activity-header {
+  text-align: center;
+  border-bottom: 1px solid #20463B;
+  padding-top: 1em;
+  padding-bottom: 1em;
+  margin-bottom: 1em;
+}
+.recent-activity .recent-activity-list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2em;
+}
+@media screen and (min-width: 768px) {
+  .recent-activity .recent-activity-list {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .recent-activity .recent-activity-list {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+.recent-activity .recent-activity-list .recent-activity-item {
+  padding: 2em;
+  background-color: white;
+  border-radius: 20px;
+  border: 1px solid #20463B;
+}
+.recent-activity .recent-activity-list .recent-activity-item h3, .recent-activity .recent-activity-list .recent-activity-item #search-result .no-results, #search-result .recent-activity .recent-activity-list .recent-activity-item .no-results, .recent-activity .recent-activity-list .recent-activity-item #search-result article .title, #search-result article .recent-activity .recent-activity-list .recent-activity-item .title {
+  display: inline-block;
+  border: 0.555px solid var(--VERDE-PINO, #20463B);
+  border-radius: 111.041px;
+  font-size: 0.7em;
+  background-color: hsl(71, 71%, 73%);
+  padding: 0.2em 1em;
+  text-transform: uppercase;
+}
+.recent-activity .recent-activity-list .recent-activity-item h3 a, .recent-activity .recent-activity-list .recent-activity-item #search-result .no-results a, #search-result .recent-activity .recent-activity-list .recent-activity-item .no-results a, .recent-activity .recent-activity-list .recent-activity-item #search-result article .title a, #search-result article .recent-activity .recent-activity-list .recent-activity-item .title a {
+  color: #20463B !important;
+}
+.recent-activity .recent-activity-list .recent-activity-item .recent-activity-item-link {
+  display: block;
+  margin-top: 0.5em;
+  margin-bottom: 1em;
+}
+.recent-activity .recent-activity-list .recent-activity-item .recent-activity-item-comment {
+  display: none;
+}
+.recent-activity .recent-activity-controls {
+  margin: 2em auto 0;
+  text-align: center;
+  display: block;
+}
+.cta {
+  margin-top: 3em;
+  margin-bottom: 3em;
+}
+
+.navbar .button, .navbar #search-result .pagination a, #search-result .pagination .navbar a, .navbar .recent-activity .recent-activity-controls a, .recent-activity .recent-activity-controls .navbar a, .navbar .textfield, .navbar .search-form input[type=search], .search-form .navbar input[type=search] {
+  font-size: 0.8em;
+}
+.navbar form {
+  width: 100%;
+}
+
+#search-result {
+  background-color: white;
+}
+#search-result h2 {
+  font-size: 2.5em;
+  margin-bottom: 1em;
+  text-align: center;
+  margin-top: 1em;
+}
+#search-result article:not(:last-child) {
+  border-bottom: 1px solid #20463B;
+}
+#search-result article em {
+  background-color: #D9EB89;
+}
+#search-result .no-results {
+  padding: 3em 0;
+  text-align: center;
+}
+#search-result .pagination {
+  display: block;
+  padding-top: 1em;
+  padding-bottom: 5em;
+}
+#search-result .pagination ul {
+  padding-left: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  list-style: none;
+  gap: 1em;
+}
+@media screen and (min-width: 800px) {
+  #search-result .pagination ul {
+    flex-direction: row;
+  }
+}
+#search-result .pagination ul li {
+  display: inline-block;
+  height: 3em;
+}
+#search-result .pagination a {
+  display: block;
+  text-align: center;
+}
+@media screen and (min-width: 800px) {
+  #search-result .pagination a {
+    display: inline-block;
+  }
+}
+
+#no-search-results {
+  text-align: center;
+  max-width: 1024px;
+  margin: 3em auto;
 }

@@ -220,6 +220,12 @@
           "label": "logo_label"
         },
         {
+          "identifier": "footer_logo",
+          "type": "file",
+          "description": "footer_logo_description",
+          "label": "footer_logo_label"
+        },
+        {
           "identifier": "show_brand_name",
           "type": "checkbox",
           "description": "show_brand_name_description",
