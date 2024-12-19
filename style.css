@@ -518,6 +518,44 @@ ol.assistant-steps > li {
   list-style-position: inside;
 }
 
+ul.breadcrumbs, ol.breadcrumbs {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+ul.breadcrumbs li, ol.breadcrumbs li {
+  display: inline-block;
+  margin: 0;
+  font-size: 1.2em;
+}
+
+ul.breadcrumbs li:last-child > a, ol.breadcrumbs li:last-child > a {
+  background-color: #fbfbfb !important;
+}
+
+ul.breadcrumbs li a, ol.breadcrumbs li a {
+  border-radius: 160px;
+  border: 0.8px solid #20463b;
+  padding: 0.5em 2.5em;
+  text-decoration: none;
+  color: #20463b !important;
+  text-transform: uppercase;
+}
+
+ul.breadcrumbs li a:hover, ol.breadcrumbs li a:hover {
+  background-color: #20463b !important;
+  color: #fbfbfb !important;
+}
+
+ul.breadcrumbs li:not(:last-child)::after, ol.breadcrumbs li:not(:last-child)::after {
+  content: "—";
+  margin-left: 1em;
+  margin-right: 1em;
+}
+
 .button-group {
   display: flex;
   flex-direction: column;
@@ -531,7 +569,7 @@ ol.assistant-steps > li {
     flex-wrap: nowrap;
   }
 }
-.button, #search-result .pagination a, .recent-activity .recent-activity-controls a {
+.button, #search-result .pagination a, .error-page .back-to-homepage a, .recent-activity .recent-activity-controls a {
   padding: 1em 1.5em;
   font-family: Syne, sans-serif;
   font-size: 1em;
@@ -544,44 +582,44 @@ ol.assistant-steps > li {
   cursor: pointer;
 }
 
-.button:hover, #search-result .pagination a:hover, .recent-activity .recent-activity-controls a:hover {
+.button:hover, #search-result .pagination a:hover, .error-page .back-to-homepage a:hover, .recent-activity .recent-activity-controls a:hover {
   text-decoration: none;
   box-shadow: none !important;
   transition: box-shadow 0.5s ease, background-color 0.5s ease;
 }
 
-.button:focus, #search-result .pagination a:focus, .recent-activity .recent-activity-controls a:focus {
+.button:focus, #search-result .pagination a:focus, .error-page .back-to-homepage a:focus, .recent-activity .recent-activity-controls a:focus {
   outline: none;
   border-width: 2px;
   padding: calc(1em - 1px) calc(1.5em - 1px);
 }
 
-.button:disabled, #search-result .pagination a:disabled, .recent-activity .recent-activity-controls a:disabled, .button.disabled, #search-result .pagination a.disabled, .recent-activity .recent-activity-controls a.disabled {
+.button:disabled, #search-result .pagination a:disabled, .error-page .back-to-homepage a:disabled, .recent-activity .recent-activity-controls a:disabled, .button.disabled, #search-result .pagination a.disabled, .error-page .back-to-homepage a.disabled, .recent-activity .recent-activity-controls a.disabled {
   opacity: 0.5;
   pointer-events: none;
 }
 
-.button.primary, #search-result .pagination a.primary, .recent-activity .recent-activity-controls a.primary {
+.button.primary, #search-result .pagination a.primary, .error-page .back-to-homepage a.primary, .recent-activity .recent-activity-controls a.primary {
   color: #fff !important;
   background-color: #007459;
   box-shadow: 4px 4px #fbfbfb, 4px 4px 0 1px #161c1c;
 }
 
-.button.primary:hover, #search-result .pagination a.primary:hover, .recent-activity .recent-activity-controls a.primary:hover {
+.button.primary:hover, #search-result .pagination a.primary:hover, .error-page .back-to-homepage a.primary:hover, .recent-activity .recent-activity-controls a.primary:hover {
   background-color: #20463b;
 }
 
-.button.secondary, #search-result .pagination a, .recent-activity .recent-activity-controls a.secondary {
+.button.secondary, #search-result .pagination a, .error-page .back-to-homepage a.secondary, .recent-activity .recent-activity-controls a.secondary {
   color: #20463b !important;
   background-color: #d9eb89;
   box-shadow: 4px 4px #fbfbfb, 4px 4px 0 1px #20463b;
 }
 
-.button.secondary:hover, #search-result .pagination a:hover, .recent-activity .recent-activity-controls a.secondary:hover {
+.button.secondary:hover, #search-result .pagination a:hover, .error-page .back-to-homepage a.secondary:hover, .recent-activity .recent-activity-controls a.secondary:hover {
   background-color: #c8e6da;
 }
 
-.button.tertiary, #search-result .pagination a.tertiary, .recent-activity .recent-activity-controls a {
+.button.tertiary, #search-result .pagination a.tertiary, .error-page .back-to-homepage a, .recent-activity .recent-activity-controls a {
   color: #161c1c !important;
   font-family: Figtree, sans-serif;
   font-weight: 500;
@@ -589,11 +627,11 @@ ol.assistant-steps > li {
   border-color: #161c1c;
 }
 
-.button.tertiary:hover, #search-result .pagination a.tertiary:hover, .recent-activity .recent-activity-controls a:hover {
+.button.tertiary:hover, #search-result .pagination a.tertiary:hover, .error-page .back-to-homepage a:hover, .recent-activity .recent-activity-controls a:hover {
   background-color: #fbfbfb;
 }
 
-.button.no-shadow, #search-result .pagination a, .recent-activity .recent-activity-controls a {
+.button.no-shadow, #search-result .pagination a, .error-page .back-to-homepage a, .recent-activity .recent-activity-controls a {
   box-shadow: none;
 }
 
@@ -1904,7 +1942,70 @@ textarea.textfield {
   margin-bottom: 3em;
 }
 
-.navbar .button, .navbar #search-result .pagination a, #search-result .pagination .navbar a, .navbar .recent-activity .recent-activity-controls a, .recent-activity .recent-activity-controls .navbar a, .navbar .textfield, .navbar .search-form input[type=search], .search-form .navbar input[type=search] {
+.error-page {
+  text-align: center;
+}
+.error-page h1 {
+  margin-top: 2em;
+  margin-bottom: 1em;
+}
+.error-page h2 {
+  margin-top: 2em;
+  margin-bottom: 0.5em;
+}
+.error-page .back-to-homepage {
+  margin-top: 4em;
+  margin-bottom: 4em;
+}
+#article-heading > div {
+  max-width: 1440px;
+}
+#article-heading > div .breadcrumbs {
+  justify-content: center;
+  margin: 4em auto;
+}
+#article-heading > div h1 {
+  text-align: center;
+  font-weight: 600;
+  margin-bottom: 1em;
+}
+#article-heading > div .date {
+  text-align: center;
+  margin: 0 auto 4em;
+}
+#article-heading > div .date span {
+  display: inline-block;
+  border-radius: 160px;
+  background-color: #F9F8F3;
+  border: 1px solid #20463B;
+  padding: 0.5em 2.5em;
+  text-decoration: none;
+  color: #20463B !important;
+  text-transform: uppercase;
+}
+
+article {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.article-votes {
+  text-align: center;
+  max-width: 1440px;
+  margin: 0 auto 4em;
+  padding-top: 4em;
+  border-top: 2px solid hsl(0, 0%, 93%);
+}
+.article-votes .article-votes-controls {
+  display: flex;
+  justify-content: center;
+  gap: 2em;
+}
+.article-votes .article-votes-controls .button, .article-votes .article-votes-controls #search-result .pagination a, #search-result .pagination .article-votes .article-votes-controls a, .article-votes .article-votes-controls .recent-activity .recent-activity-controls a, .recent-activity .recent-activity-controls .article-votes .article-votes-controls a, .article-votes .article-votes-controls .error-page .back-to-homepage a, .error-page .back-to-homepage .article-votes .article-votes-controls a {
+  text-transform: uppercase;
+}
+
+.navbar .button, .navbar #search-result .pagination a, #search-result .pagination .navbar a, .navbar .recent-activity .recent-activity-controls a, .recent-activity .recent-activity-controls .navbar a, .navbar .error-page .back-to-homepage a, .error-page .back-to-homepage .navbar a, .navbar .textfield, .navbar .search-form input[type=search], .search-form .navbar input[type=search] {
   font-size: 0.8em;
 }
 .navbar form {
@@ -1966,4 +2067,8 @@ textarea.textfield {
   text-align: center;
   max-width: 1024px;
   margin: 3em auto;
+}
+
+.breadcrumbs li:first-child {
+  display: none;
 }
