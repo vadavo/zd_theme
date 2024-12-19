@@ -15,18 +15,28 @@
     </div>
 </div>
 
-<article>
-    {{article.body}}
-</article>
+<div class="article-container">
+    <article>
+        {{article.body}}
+    </article>
 
-{{#with article}}
-    <div class="article-votes">
-        <h2 class="article-votes-question" id="article-votes-label">{{t
-                'was_this_article_helpful'}}</h2>
-        <div class="article-votes-controls" role="group" aria-labelledby="article-votes-label">
-            {{vote 'up' class='button article-vote article-vote-up' selected_class="button-primary"}}
-            {{vote 'down' class='button article-vote article-vote-down'
-                   selected_class="button-primary"}}
+    {{#with article}}
+        <div class="article-votes">
+            <h2 class="article-votes-question" id="article-votes-label">{{t
+                    'was_this_article_helpful'}}</h2>
+            <div class="article-votes-controls" role="group" aria-labelledby="article-votes-label">
+                {{vote 'up' class='button article-vote article-vote-up' selected_class="button-primary"}}
+                {{vote 'down' class='button article-vote article-vote-down'
+                       selected_class="button-primary"}}
+            </div>
         </div>
+    {{/with}}
+
+    <div class="cta icon-question">
+        <div class="header">¿Tienes más dudas?</div>
+        <div class="content">
+            <p>Estamos aquí para ayudarte.</p>
+        </div>
+        <a href="/hc/es-es/requests/new" class="button primary no-shadow">Crea un ticket</a>
     </div>
-{{/with}}
+</div>
