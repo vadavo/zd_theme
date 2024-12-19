@@ -569,7 +569,7 @@ ul.breadcrumbs li:not(:last-child)::after, ol.breadcrumbs li:not(:last-child)::a
     flex-wrap: nowrap;
   }
 }
-.button, #search-result .pagination a, .error-page .back-to-homepage a, .recent-activity .recent-activity-controls a {
+.button, #search-result .pagination a, #new-request-form button[type=submit], .error-page .back-to-homepage a, .recent-activity .recent-activity-controls a {
   padding: 1em 1.5em;
   font-family: Syne, sans-serif;
   font-size: 1em;
@@ -582,44 +582,44 @@ ul.breadcrumbs li:not(:last-child)::after, ol.breadcrumbs li:not(:last-child)::a
   cursor: pointer;
 }
 
-.button:hover, #search-result .pagination a:hover, .error-page .back-to-homepage a:hover, .recent-activity .recent-activity-controls a:hover {
+.button:hover, #search-result .pagination a:hover, #new-request-form button[type=submit]:hover, .error-page .back-to-homepage a:hover, .recent-activity .recent-activity-controls a:hover {
   text-decoration: none;
   box-shadow: none !important;
   transition: box-shadow 0.5s ease, background-color 0.5s ease;
 }
 
-.button:focus, #search-result .pagination a:focus, .error-page .back-to-homepage a:focus, .recent-activity .recent-activity-controls a:focus {
+.button:focus, #search-result .pagination a:focus, #new-request-form button[type=submit]:focus, .error-page .back-to-homepage a:focus, .recent-activity .recent-activity-controls a:focus {
   outline: none;
   border-width: 2px;
   padding: calc(1em - 1px) calc(1.5em - 1px);
 }
 
-.button:disabled, #search-result .pagination a:disabled, .error-page .back-to-homepage a:disabled, .recent-activity .recent-activity-controls a:disabled, .button.disabled, #search-result .pagination a.disabled, .error-page .back-to-homepage a.disabled, .recent-activity .recent-activity-controls a.disabled {
+.button:disabled, #search-result .pagination a:disabled, #new-request-form button[type=submit]:disabled, .error-page .back-to-homepage a:disabled, .recent-activity .recent-activity-controls a:disabled, .button.disabled, #search-result .pagination a.disabled, #new-request-form button.disabled[type=submit], .error-page .back-to-homepage a.disabled, .recent-activity .recent-activity-controls a.disabled {
   opacity: 0.5;
   pointer-events: none;
 }
 
-.button.primary, #search-result .pagination a.primary, .error-page .back-to-homepage a.primary, .recent-activity .recent-activity-controls a.primary {
+.button.primary, #search-result .pagination a.primary, #new-request-form button[type=submit], .error-page .back-to-homepage a.primary, .recent-activity .recent-activity-controls a.primary {
   color: #fff !important;
   background-color: #007459;
   box-shadow: 4px 4px #fbfbfb, 4px 4px 0 1px #161c1c;
 }
 
-.button.primary:hover, #search-result .pagination a.primary:hover, .error-page .back-to-homepage a.primary:hover, .recent-activity .recent-activity-controls a.primary:hover {
+.button.primary:hover, #search-result .pagination a.primary:hover, #new-request-form button[type=submit]:hover, .error-page .back-to-homepage a.primary:hover, .recent-activity .recent-activity-controls a.primary:hover {
   background-color: #20463b;
 }
 
-.button.secondary, #search-result .pagination a, .error-page .back-to-homepage a.secondary, .recent-activity .recent-activity-controls a.secondary {
+.button.secondary, #search-result .pagination a, #new-request-form button.secondary[type=submit], .error-page .back-to-homepage a.secondary, .recent-activity .recent-activity-controls a.secondary {
   color: #20463b !important;
   background-color: #d9eb89;
   box-shadow: 4px 4px #fbfbfb, 4px 4px 0 1px #20463b;
 }
 
-.button.secondary:hover, #search-result .pagination a:hover, .error-page .back-to-homepage a.secondary:hover, .recent-activity .recent-activity-controls a.secondary:hover {
+.button.secondary:hover, #search-result .pagination a:hover, #new-request-form button.secondary[type=submit]:hover, .error-page .back-to-homepage a.secondary:hover, .recent-activity .recent-activity-controls a.secondary:hover {
   background-color: #c8e6da;
 }
 
-.button.tertiary, #search-result .pagination a.tertiary, .error-page .back-to-homepage a, .recent-activity .recent-activity-controls a {
+.button.tertiary, #search-result .pagination a.tertiary, #new-request-form button.tertiary[type=submit], .error-page .back-to-homepage a, .recent-activity .recent-activity-controls a {
   color: #161c1c !important;
   font-family: Figtree, sans-serif;
   font-weight: 500;
@@ -627,11 +627,11 @@ ul.breadcrumbs li:not(:last-child)::after, ol.breadcrumbs li:not(:last-child)::a
   border-color: #161c1c;
 }
 
-.button.tertiary:hover, #search-result .pagination a.tertiary:hover, .error-page .back-to-homepage a:hover, .recent-activity .recent-activity-controls a:hover {
+.button.tertiary:hover, #search-result .pagination a.tertiary:hover, #new-request-form button.tertiary[type=submit]:hover, .error-page .back-to-homepage a:hover, .recent-activity .recent-activity-controls a:hover {
   background-color: #fbfbfb;
 }
 
-.button.no-shadow, #search-result .pagination a, .error-page .back-to-homepage a, .recent-activity .recent-activity-controls a {
+.button.no-shadow, #search-result .pagination a, #new-request-form button.no-shadow[type=submit], .error-page .back-to-homepage a, .recent-activity .recent-activity-controls a {
   box-shadow: none;
 }
 
@@ -1957,6 +1957,23 @@ textarea.textfield {
   margin-top: 4em;
   margin-bottom: 4em;
 }
+#new-request-heading {
+  padding-top: 5em;
+  padding-bottom: 4em;
+  text-align: center;
+}
+
+#new-request-form {
+  padding-top: 4em;
+  padding-bottom: 4em;
+}
+#new-request-form button[type=submit] {
+  font-family: Syne, sans-serif !important;
+}
+#new-request-form > div > p {
+  display: none;
+}
+
 #article-heading > div {
   max-width: 1440px;
 }
@@ -2001,7 +2018,7 @@ textarea.textfield {
   justify-content: center;
   gap: 2em;
 }
-.article-votes .article-votes-controls .button, .article-votes .article-votes-controls #search-result .pagination a, #search-result .pagination .article-votes .article-votes-controls a, .article-votes .article-votes-controls .recent-activity .recent-activity-controls a, .recent-activity .recent-activity-controls .article-votes .article-votes-controls a, .article-votes .article-votes-controls .error-page .back-to-homepage a, .error-page .back-to-homepage .article-votes .article-votes-controls a {
+.article-votes .article-votes-controls .button, .article-votes .article-votes-controls #search-result .pagination a, #search-result .pagination .article-votes .article-votes-controls a, .article-votes .article-votes-controls .recent-activity .recent-activity-controls a, .recent-activity .recent-activity-controls .article-votes .article-votes-controls a, .article-votes .article-votes-controls .error-page .back-to-homepage a, .error-page .back-to-homepage .article-votes .article-votes-controls a, .article-votes .article-votes-controls #new-request-form button[type=submit], #new-request-form .article-votes .article-votes-controls button[type=submit] {
   text-transform: uppercase;
 }
 
@@ -2010,7 +2027,7 @@ textarea.textfield {
   margin-bottom: 2em;
 }
 
-.navbar .button, .navbar #search-result .pagination a, #search-result .pagination .navbar a, .navbar .recent-activity .recent-activity-controls a, .recent-activity .recent-activity-controls .navbar a, .navbar .error-page .back-to-homepage a, .error-page .back-to-homepage .navbar a, .navbar .textfield, .navbar .search-form input[type=search], .search-form .navbar input[type=search] {
+.navbar .button, .navbar #search-result .pagination a, #search-result .pagination .navbar a, .navbar .recent-activity .recent-activity-controls a, .recent-activity .recent-activity-controls .navbar a, .navbar .error-page .back-to-homepage a, .error-page .back-to-homepage .navbar a, .navbar #new-request-form button[type=submit], #new-request-form .navbar button[type=submit], .navbar .textfield, .navbar .search-form input[type=search], .search-form .navbar input[type=search] {
   font-size: 0.8em;
 }
 .navbar form {

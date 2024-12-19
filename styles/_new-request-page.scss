@@ -1,0 +1,20 @@
+#new-request-heading {
+    padding-top: 5em;
+    padding-bottom: 4em;
+    text-align: center;
+}
+
+#new-request-form {
+    padding-top: 4em;
+    padding-bottom: 4em;
+
+    button[type=submit] {
+        font-family: Syne, sans-serif !important;
+        @extend .button;
+        @extend .primary;
+    }
+
+    > div > p {
+        display: none;
+    }
+}
