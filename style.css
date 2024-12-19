@@ -1987,6 +1987,8 @@ textarea.textfield {
 .article-container {
   max-width: 1440px;
   margin: 0 auto;
+  padding-left: 2em;
+  padding-right: 2em;
 }
 
 .article-votes {
@@ -2001,6 +2003,11 @@ textarea.textfield {
 }
 .article-votes .article-votes-controls .button, .article-votes .article-votes-controls #search-result .pagination a, #search-result .pagination .article-votes .article-votes-controls a, .article-votes .article-votes-controls .recent-activity .recent-activity-controls a, .recent-activity .recent-activity-controls .article-votes .article-votes-controls a, .article-votes .article-votes-controls .error-page .back-to-homepage a, .error-page .back-to-homepage .article-votes .article-votes-controls a {
   text-transform: uppercase;
+}
+
+.category-section {
+  margin-top: 4em;
+  margin-bottom: 2em;
 }
 
 .navbar .button, .navbar #search-result .pagination a, #search-result .pagination .navbar a, .navbar .recent-activity .recent-activity-controls a, .recent-activity .recent-activity-controls .navbar a, .navbar .error-page .back-to-homepage a, .error-page .back-to-homepage .navbar a, .navbar .textfield, .navbar .search-form input[type=search], .search-form .navbar input[type=search] {

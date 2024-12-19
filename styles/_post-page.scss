@@ -32,6 +32,8 @@
 .article-container {
     max-width: 1440px;
     margin: 0 auto;
+    padding-left: 2em;
+    padding-right: 2em;
 }
 
 .article-votes {
@@ -48,4 +50,9 @@
             text-transform: uppercase;
         }
     }
+}
+
+.category-section {
+    margin-top: 4em;
+    margin-bottom: 2em;
 }
