@@ -1870,6 +1870,7 @@ textarea.textfield {
   margin-bottom: 1em;
 }
 #categories > .categories {
+  margin-bottom: 4em;
   display: grid;
   grid-template-columns: 1fr;
   gap: 2em;
