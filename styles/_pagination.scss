@@ -1,57 +1,35 @@
-/***** Pagination *****/
-
 .pagination {
-  margin: 20px 0;
-  text-align: center;
+    display: block;
+    padding-top: 1em;
+    padding-bottom: 5em;
 
-  &-next, &-prev, &-first, &-last {
-    display: inline-block;
-    &-link {
-      @extend .button;
-    }
-  }
+    ul {
+        padding-left: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        list-style: none;
+        gap: 1em;
 
-  &-first, &-last {
-    &-link {
-      padding: 0 10px;
+        @media screen and (min-width: 800px) {
+            flex-direction: row;
+        }
+
+        li {
+            display: inline-block;
+            height: 3em;
+        }
     }
 
-    &-text {
-     @include visually-hidden;
-    }
-  }
+    a {
+        display: block;
+        text-align: center;
+        @extend .button;
+        @extend .secondary;
+        @extend .no-shadow;
 
-  &-next {
-    &-link {
-      padding-right: 10px;
+        @media screen and (min-width: 800px) {
+            display: inline-block;
+        }
     }
-    &-text {
-      margin-right: 10px;
-    }
-    [dir="rtl"] & {
-      &-link {
-        padding-left: 10px;
-      }
-      &-text {
-        margin-left: 10px;
-      }
-    }
-  }
-
-  &-prev {
-    &-link {
-      padding-left: 10px;
-    }
-    &-text {
-      margin-left: 10px;
-    }
-    [dir="rtl"] & {
-      &-link {
-        padding-right: 10px;
-      }
-      &-text {
-        margin-right: 10px;
-      }
-    }
-  }
 }

@@ -27,43 +27,6 @@
         padding: 3em 0;
         text-align: center;
     }
-
-    .pagination {
-        display: block;
-        //height: 4em;
-        padding-top: 1em;
-        padding-bottom: 5em;
-
-        ul {
-            padding-left: 0;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            list-style: none;
-            gap: 1em;
-
-            @media screen and (min-width: 800px) {
-                flex-direction: row;
-            }
-
-            li {
-                display: inline-block;
-                height: 3em;
-            }
-        }
-
-        a {
-            display: block;
-            text-align: center;
-            @extend .button;
-            @extend .secondary;
-            @extend .no-shadow;
-
-            @media screen and (min-width: 800px) {
-                display: inline-block;
-            }
-        }
-    }
 }
 
 #no-search-results {

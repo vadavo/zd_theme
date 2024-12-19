@@ -1,11 +1,17 @@
 .navbar {
 
-  .button, .textfield {
-    font-size: .8em;
-  }
+    &.desktop {
+        .right, .left, .center {
+            height: 63px !important;
+        }
+    }
 
-  form {
-    width: 100%;
-  }
+    .button, .textfield {
+        font-size: .8em;
+    }
+
+    form {
+        width: 100%;
+    }
 }
 
