@@ -44,6 +44,10 @@
 }
 
 #request-comments {
+    .white {
+        background-color: white;
+    }
+
     .comment-item {
         max-width: 1440px;
         margin: 0 auto;
@@ -64,7 +68,7 @@
             flex-direction: column;
             gap: 1em;
 
-            >div {
+            > div {
                 text-align: center;
             }
         }
@@ -92,6 +96,7 @@
 
         .author-avatar {
             grid-area: author-avatar;
+
             img {
                 border-radius: 160px;
             }

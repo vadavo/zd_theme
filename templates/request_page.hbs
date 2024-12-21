@@ -11,7 +11,7 @@
 
 <div class="division-group" id="request-comments">
     {{#each comments}}
-        <div class="division bottom {{#if author.agent}}secondary{{/if}}">
+        <div class="division bottom {{#if author.agent}}secondary{{else}}white{{/if}}">
             <div class="comment-item">
                 <div class="metadata">
                     <div class="author-name"><strong>{{author.name}}</strong></div>
