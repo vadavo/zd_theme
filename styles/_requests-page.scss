@@ -42,4 +42,78 @@
 
 #list-request {
     background-color: white;
+    padding-bottom: 2em;
+
+    .request-item {
+        display: grid;
+        gap: .5em;
+
+        grid-template-areas: "title" "updated-at" "tags";
+
+        @media screen and (min-width: 768px) {
+            grid-template-columns: 1fr 16em;
+            grid-template-rows: 1fr 1fr;
+            grid-template-areas: "title tags" "updated-at tags";
+        }
+
+        margin-top: 3em;
+
+        &:not(:last-child) {
+            padding-bottom: 2em;
+            border-bottom: 1px solid #20463B;
+        }
+
+        .tags {
+            grid-area: tags;
+            display: flex;
+            flex-direction: column;
+            gap: .5em;
+        }
+
+        .title {
+            grid-area: title;
+            @extend h3;
+        }
+
+        .id {
+            width: 100%;
+            height: fit-content;
+            text-align: center;
+            margin: 0 auto;
+            border-radius: 160px;
+            border: 1px solid #20463B;
+            padding: 0.5em 2.5em;
+            text-decoration: none;
+            color: #20463B !important;
+        }
+
+        .updated-at {
+            grid-area: updated-at;
+        }
+
+        .status {
+            width: 100%;
+            height: fit-content;
+            text-align: center;
+            margin: 0 auto;
+            border-radius: 160px;
+            border: 1px solid #20463B;
+            padding: 0.5em 2.5em;
+            text-decoration: none;
+            color: #20463B !important;
+
+            &.answered {
+                color: white !important;
+                background-color: #E0A407;
+            }
+
+            &.solved {
+                background-color: #D9EB89;
+            }
+        }
+
+        em {
+            background-color: #D9EB89;
+        }
+    }
 }
