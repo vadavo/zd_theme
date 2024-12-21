@@ -1,0 +1,121 @@
+#request-heading {
+    margin-bottom: 4em;
+
+    h1 {
+        max-width: 1440px;
+        margin: 1em auto 0;
+        text-align: center;
+    }
+
+    .request-tags {
+        display: flex;
+        flex-direction: column;
+        gap: 1em;
+
+        margin-bottom: 4em;
+
+        @media screen and (min-width: 768px) {
+            justify-content: flex-start;
+            flex-direction: row;
+        }
+
+        > div {
+            //width: 100%;
+            text-align: center;
+            margin: 0 auto;
+            border-radius: 160px;
+            border: 1px solid #20463B;
+            padding: 0.5em 2.5em;
+            text-decoration: none;
+            color: #20463B !important;
+
+            &.status {
+                &.answered {
+                    color: white !important;
+                    background-color: #E0A407;
+                }
+
+                &.solved {
+                    background-color: #D9EB89;
+                }
+            }
+        }
+    }
+}
+
+#request-comments {
+    .comment-item {
+        max-width: 1440px;
+        margin: 0 auto;
+        display: grid;
+        gap: 2em;
+
+        grid-template-areas: "metadata" "body";
+
+        @media screen and (min-width: 768px) {
+            column-gap: 4em;
+            grid-template-columns: 10em 1fr;
+            grid-template-areas: "metadata body";
+        }
+
+        .metadata {
+            grid-area: metadata;
+            display: flex;
+            flex-direction: column;
+            gap: 1em;
+
+            >div {
+                text-align: center;
+            }
+        }
+
+        .author-name {
+            grid-area: author-name;
+        }
+
+        .author-role {
+            grid-area: author-role;
+            padding: 0.5em 1em;
+            border-radius: 160px;
+            text-transform: uppercase;
+            border: 1px solid #20463B;
+            text-decoration: none;
+            color: #20463B !important;
+
+            &.agent {
+                background-color: #D9EB89;
+            }
+
+            &.customer {
+            }
+        }
+
+        .author-avatar {
+            grid-area: author-avatar;
+            img {
+                border-radius: 160px;
+            }
+        }
+
+        .date {
+            grid-area: date;
+            font-size: .8em;
+        }
+
+        .body {
+            grid-area: body;
+        }
+    }
+}
+
+#add-comment {
+    .controls {
+        text-align: center;
+    }
+
+    input[type="submit"] {
+        text-align: center;
+        margin-top: 1em;
+        margin-bottom: 4em;
+    }
+}
