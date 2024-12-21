@@ -1,0 +1,22 @@
+#list-request-heading {
+    h1 {
+        text-align: center;
+        font-weight: 600;
+        margin-bottom: 1em;
+    }
+
+    .filters {
+        display: flex;
+        justify-content: center;
+        gap: 2em;
+        margin-bottom: 4em;
+    }
+}
+
+#request-list-heading {
+    margin-bottom: 4em;
+}
+
+#list-request {
+    background-color: white;
+}

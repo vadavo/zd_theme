@@ -1,16 +1,39 @@
-<div class="container">
-  {{#if settings.request_list_beta}}
-    <header class="my-activities-header">
-      <h1>{{t 'requests'}}</h1>
-    </header>
+<div class="division-group" id="request-list-heading">
+    <div id="list-request-heading" class="division top">
+        <div>
+            <h1>Mis tickets</h1>
 
-    <div id="main-content">
-      {{request_list}}
+            <div class="filters">
+                <div>
+                    <label for="filter">Filtro</label>
+                    <select class="textfield" id="filter">
+                        {{#each filters}}
+                            <option value="{{url}}">{{name}}</option>
+                        {{/each}}
+                    </select>
+                </div>
+
+                <div>
+                    <label for="request-status-select">Estado</label>
+                    {{select 'status' id='request-status-select' class='textfield'}}
+                </div>
+            </div>
+
+        </div>
     </div>
-  {{else}}
-    <header class="my-activities-header">
-      <h1>{{t 'my_requests'}}</h1>
+</div>
 
+<div id="request-list-content" class="division-group">
+    <div id="list-request" class="division bottom">
+        Tickets aquí
+    </div>
+</div>
+
+
+
+<!-- Original template -->
+<div class="container">
+    <header class="my-activities-header">
       <div class="my-activities-sub-nav">
         <nav class="collapsible-nav collapsible-nav-border">
           <button type="button" class="collapsible-nav-toggle" aria-label="{{t 'toggle_navigation'}}" aria-expanded="false">
@@ -136,5 +159,4 @@
     </div>
 
     {{pagination}}
-  {{/if}}
 </div>
