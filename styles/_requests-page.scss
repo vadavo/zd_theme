@@ -2,14 +2,37 @@
     h1 {
         text-align: center;
         font-weight: 600;
-        margin-bottom: 1em;
+        margin-top: 1em;
     }
 
     .filters {
-        display: flex;
+        display: grid;
+        grid-template-areas: "filter" "status" "search" "submit";
+
+        @media screen and (min-width: 768px) {
+            grid-template-areas: "filter status" "search search" "submit submit";
+        }
+
         justify-content: center;
         gap: 2em;
         margin-bottom: 4em;
+
+        #area-filter {
+            grid-area: filter;
+        }
+
+        #area-status {
+            grid-area: status;
+        }
+
+        #area-search {
+            grid-area: search;
+        }
+
+        #area-submit {
+            margin: 0 auto;
+            grid-area: submit;
+        }
     }
 }
 

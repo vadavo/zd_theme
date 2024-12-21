@@ -1978,13 +1978,32 @@ textarea.textfield {
 #list-request-heading h1 {
   text-align: center;
   font-weight: 600;
-  margin-bottom: 1em;
+  margin-top: 1em;
 }
 #list-request-heading .filters {
-  display: flex;
+  display: grid;
+  grid-template-areas: "filter" "status" "search" "submit";
   justify-content: center;
   gap: 2em;
   margin-bottom: 4em;
+}
+@media screen and (min-width: 768px) {
+  #list-request-heading .filters {
+    grid-template-areas: "filter status" "search search" "submit submit";
+  }
+}
+#list-request-heading .filters #area-filter {
+  grid-area: filter;
+}
+#list-request-heading .filters #area-status {
+  grid-area: status;
+}
+#list-request-heading .filters #area-search {
+  grid-area: search;
+}
+#list-request-heading .filters #area-submit {
+  margin: 0 auto;
+  grid-area: submit;
 }
 
 #request-list-heading {
