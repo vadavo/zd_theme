@@ -2113,6 +2113,9 @@ textarea.textfield {
   background-color: #D9EB89;
 }
 
+#request-comments .white {
+  background-color: white !important;
+}
 #request-comments .comment-item {
   max-width: 1440px;
   margin: 0 auto;
