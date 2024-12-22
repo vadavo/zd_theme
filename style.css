@@ -1860,6 +1860,111 @@ textarea.textfield {
   display: none;
 }
 
+nav {
+  font-size: 16px;
+  height: 64px;
+  border-bottom: 1px solid #20463B;
+}
+@media screen and (min-width: 1024px) {
+  nav {
+    font-size: 1em;
+    height: 128px;
+  }
+  nav .button, nav .pagination a, .pagination nav a, nav #new-request-form button[type=submit], #new-request-form nav button[type=submit], nav .error-page .back-to-homepage a, .error-page .back-to-homepage nav a, nav .recent-activity .recent-activity-controls a, .recent-activity .recent-activity-controls nav a, nav .textfield, nav .search-form input[type=search], .search-form nav input[type=search] {
+    font-size: 14px;
+  }
+}
+nav > div {
+  height: 100%;
+  max-width: 1440px;
+  display: grid;
+  margin: 0 auto;
+  grid-template-columns: 1fr fit-content(100%);
+  padding: 1em 2em 2em;
+}
+nav > div > div {
+  display: none;
+}
+nav > div > .logo {
+  margin: auto 0;
+  display: block;
+  grid-column: 1/2;
+}
+nav > div > .logo img {
+  height: 32px;
+}
+nav > div > .burger {
+  display: block;
+  grid-column: 2/3;
+  margin: auto 0 auto auto;
+  width: 2em;
+  height: 2em;
+  cursor: pointer;
+}
+@media screen and (min-width: 1024px) {
+  nav > div {
+    grid-template-columns: fit-content(100%) 1fr fit-content(100%);
+    grid-template-rows: 64px 64px;
+    column-gap: 2em;
+    padding: 0 1em;
+  }
+  nav > div > .back-to-vadavo {
+    margin: auto 0;
+    display: block;
+    grid-column: 1/2;
+    grid-row: 1/2;
+  }
+  nav > div > .logo {
+    grid-row: 2/3;
+  }
+  nav > div > .logo img {
+    height: initial;
+  }
+  nav > div > .contact-info {
+    display: flex;
+    margin: auto 0 auto auto;
+    gap: 1.5em;
+    grid-column: 3/4;
+    grid-row: 1/2;
+  }
+  nav > div > .contact-info > div {
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+  }
+  nav > div > .contact-info svg {
+    display: block;
+    height: 1em;
+    width: 1em;
+  }
+  nav > div > .search {
+    display: block;
+    margin: auto 0;
+    grid-column: 2/3;
+    grid-row: 2/3;
+  }
+  nav > div > .links {
+    display: flex;
+    align-items: center;
+    gap: 1em;
+    margin: auto 0 auto auto;
+    grid-column: 3/4;
+    grid-row: 2/3;
+  }
+  nav > div > .burger {
+    display: none;
+  }
+  nav > div::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 64px;
+    left: 0;
+    width: 100%;
+    border-bottom: 1px solid #20463B;
+  }
+}
+
 .hero {
   padding: 2em;
   max-width: 1024px;

@@ -1,0 +1,121 @@
+$breakpoint: 1024px;
+
+nav {
+    font-size: 16px;
+    height: 64px;
+    border-bottom: 1px solid #20463B;
+
+    @media screen and (min-width: $breakpoint) {
+        font-size: 1em;
+        height: 128px;
+
+        .button, .textfield {
+            font-size: 14px;
+        }
+    }
+
+    > div {
+        height: 100%;
+        max-width: 1440px;
+        display: grid;
+        margin: 0 auto;
+        grid-template-columns: 1fr fit-content(100%);
+        padding: 1em 2em 2em;
+
+        > div {
+            display: none;
+        }
+
+        > .logo {
+            margin: auto 0;
+            display: block;
+            grid-column: 1 / 2;
+            img {
+                height: 32px;
+            }
+        }
+
+        > .burger {
+            display: block;
+            grid-column: 2 / 3;
+            margin: auto 0 auto auto;
+            width: 2em;
+            height: 2em;
+            cursor: pointer;
+        }
+
+        @media screen and (min-width: $breakpoint) {
+            grid-template-columns: fit-content(100%) 1fr fit-content(100%);
+            grid-template-rows: 64px 64px;
+            column-gap: 2em;
+            padding: 0 1em;
+
+            > .back-to-vadavo {
+                margin: auto 0;
+                display: block;
+                grid-column: 1 / 2;
+                grid-row: 1 / 2;
+            }
+
+            > .logo {
+                grid-row: 2 / 3;
+
+                img {
+                    height: initial;
+                }
+            }
+
+            > .contact-info {
+                display: flex;
+                margin: auto 0 auto auto;
+                gap: 1.5em;
+                grid-column: 3 / 4;
+                grid-row: 1 / 2;
+
+                > div {
+                    display: flex;
+                    align-items: center;
+                    gap: .5em;
+                }
+
+                svg {
+                    display: block;
+                    height: 1em;
+                    width: 1em;
+                }
+            }
+
+            > .search {
+                display: block;
+                margin: auto 0;
+                grid-column: 2 / 3;
+                grid-row: 2 / 3;
+            }
+
+            > .links {
+                display: flex;
+                align-items: center;
+                gap: 1em;
+                margin: auto 0 auto auto;
+                grid-column: 3 / 4;
+                grid-row: 2 / 3;
+            }
+
+            > .burger {
+                display: none;
+            }
+
+            &::after {
+                content: "";
+                display: block;
+                position: absolute;
+                top: 64px;
+                left: 0;
+                width: 100%;
+                border-bottom: 1px solid #20463B;
+            }
+        }
+    }
+
+
+}
