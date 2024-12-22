@@ -519,24 +519,38 @@ ol.assistant-steps > li {
 }
 
 ul.breadcrumbs, ol.breadcrumbs {
+  font-size: 0.8em;
   list-style: none;
   margin: 0;
   padding: 0;
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
 }
 
+@media screen and (min-width: 768px) {
+  ul.breadcrumbs, ol.breadcrumbs {
+    gap: 0;
+    flex-direction: row;
+  }
+}
 ul.breadcrumbs li, ol.breadcrumbs li {
-  display: inline-block;
+  display: flex;
   margin: 0;
-  font-size: 1.2em;
+  flex-direction: column;
+  align-items: center;
 }
 
+@media screen and (min-width: 768px) {
+  ul.breadcrumbs li, ol.breadcrumbs li {
+    flex-direction: row;
+  }
+}
 ul.breadcrumbs li:last-child > a, ol.breadcrumbs li:last-child > a {
   background-color: #fbfbfb !important;
 }
 
 ul.breadcrumbs li a, ol.breadcrumbs li a {
+  display: inline;
   border-radius: 160px;
   border: 0.8px solid #20463b;
   padding: 0.5em 2.5em;
@@ -551,11 +565,16 @@ ul.breadcrumbs li a:hover, ol.breadcrumbs li a:hover {
 }
 
 ul.breadcrumbs li:not(:last-child)::after, ol.breadcrumbs li:not(:last-child)::after {
-  content: "—";
-  margin-left: 1em;
-  margin-right: 1em;
+  content: "|";
 }
 
+@media screen and (min-width: 768px) {
+  ul.breadcrumbs li:not(:last-child)::after, ol.breadcrumbs li:not(:last-child)::after {
+    margin-left: 1em;
+    margin-right: 1em;
+    content: "—";
+  }
+}
 .button-group {
   display: flex;
   flex-direction: column;
