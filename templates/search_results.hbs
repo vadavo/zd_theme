@@ -47,13 +47,15 @@
         </div>
     </div>
 {{else}}
-    <div id="no-search-results" class="card">
-        <div class="header">
-            Intenta buscar algo diferente
+    {{#if query}}
+        <div id="no-search-results" class="card">
+            <div class="header">
+                Intenta buscar algo diferente
+            </div>
+            <div class="content">
+                <p>Lamentablemente, tu búsqueda no ha dado ningún resultado.</p>
+                <p>También puedes ir a la <a href="https://soporte.vadavo.com/hc/es-es">página de inicio del centro de ayuda</a> o <a href="https://soporte.vadavo.com/hc/es-es/requests/new">abrir un ticket</a>.</p>
+            </div>
         </div>
-        <div class="content">
-            <p>Lamentablemente, tu búsqueda no ha dado ningún resultado.</p>
-            <p>También puedes ir a la <a href="https://soporte.vadavo.com/hc/es-es">página de inicio del centro de ayuda</a> o <a href="https://soporte.vadavo.com/hc/es-es/requests/new">abrir un ticket</a>.</p>
-        </div>
-    </div>
+    {{/if}}
 {{/if}}

@@ -46,3 +46,25 @@
         </div>
     </div>
 </nav>
+
+<div class="burger-menu">
+    <a role="menuitem" href="/hc/es-es/requests/new" class="button primary no-shadow">Crear un ticket</a>
+    <a href="/hc/es-es/search" role="menuitem">Buscar</a>
+    {{#if signed_in}}
+        {{#link "requests" role="menuitem"}}Mis tickets{{/link}}
+        {{#link "sign_out" role="menuitem"}}Cerrar sesión{{/link}}
+    {{else}}
+        {{#link 'sign_in'}}Iniciar sesión{{/link}}
+    {{/if}}
+    <a role="menuitem" href="https://www.vadavo.com/">
+        Ir a VADAVO.com
+    </a>
+</div>
+
+<script>
+    const burger = document.querySelector(".burger");
+    const burgerMenu = document.querySelector(".burger-menu");
+    burger.addEventListener("click", () => {
+        burgerMenu.classList.toggle("open");
+    });
+</script>

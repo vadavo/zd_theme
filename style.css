@@ -1965,6 +1965,29 @@ nav > div > .burger {
   }
 }
 
+div.burger-menu {
+  background-color: #f9f8f3;
+  position: fixed;
+  top: 64px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  display: none;
+  padding-top: 1em;
+  align-items: center;
+  gap: 2em;
+}
+div.burger-menu.open {
+  display: flex;
+  flex-direction: column;
+}
+@media screen and (min-width: 1024px) {
+  div.burger-menu.open {
+    display: none;
+  }
+}
+
 .hero {
   padding: 2em;
   max-width: 1024px;
