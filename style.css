@@ -2448,3 +2448,7 @@ div.burger-menu.open {
 .breadcrumbs li:first-child {
   display: none;
 }
+
+.textfield, .search-form input[type=search] {
+  color: #222e43;
+}
